@@ -385,10 +385,6 @@ p {
     border-radius: 50%;
     margin-right: 10px;
 }
-.cloud__img img {
-}
-.cloud__icon {
-}
 
 /* Picture 
 ===============*/
@@ -488,6 +484,7 @@ p {
     align-items: center;
     cursor: pointer;
 }
+
 .pricing__header {
     background-color: #333333;
 }
@@ -505,17 +502,41 @@ p {
     color: #fff;
 }
 .pricing__header h4 {
+    margin: 0;
     text-align: center;
     color: #fff;
-    font-size: 90px;
+    font-size: 75px;
 }
 .pricing__header p {
-    text-align: center;
     padding-bottom: 15px;
+    margin: 0;
+    text-align: center;
     font-weight: 600;
     font-size: 14px;
     font-style: italic;
     color: #86878b;
+}
+
+.pricing__header h5 {
+    margin: 0;
+    font-size: 0;
+    background-color: #ff8b38;
+    border-top: 3px solid #ff8b38;
+    border-bottom: 3px solid #ff8b38;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.pricing__item.active,
+.pricing__item :hover {
+    margin-top: 0;
+}
+.pricing__item.active h5,
+.pricing__item :hover h5 {
+    font-size: inherit;
+    padding: 7px 0;
+    text-align: center;
+    color: #fff;
 }
 .pricing__characteristics {
     background-color: #fff;
@@ -993,16 +1014,13 @@ p {
     }
 }
 @media (max-width: 767px) {
-    /* Burger*/
-
     /* Intro */
     .intro__column {
         flex-direction: column;
-        margin-bottom: 20px;
+        padding: 20px 5px;
     }
     .intro__content {
-        width: 384px;
-        padding: 15px 10px 20px;
+        width: 300px;
     }
     .intro__description {
         font-size: 20px;
@@ -1015,6 +1033,8 @@ p {
         width: 285px;
     }
     .intro__form {
+        margin-right: 8px;
+        width: 290px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1031,21 +1051,19 @@ p {
     .social__intro {
         padding: 10px;
     }
-    .social__paragraph {
-    }
     .social__text {
-        width: 400px;
+        width: 300px;
         margin: 0 10px;
     }
     .social {
-        padding: 10px 0 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 5px 0;
         flex-wrap: wrap;
     }
-    .social__links {
-        margin-bottom: 10px;
+    .social__icon {
+        margin-top: 10px;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 20px;
     }
 
     /* Tabs */
@@ -1082,10 +1100,16 @@ p {
     .section__list {
         margin: 0;
     }
+    .section__img {
+        width: 290px;
+    }
     /* Picture */
     .picture__inner {
         padding: 15px 10px;
         flex-direction: column;
+    }
+    .picture__img {
+        width: 290px;
     }
     /* Awesome */
     .about {
@@ -1095,11 +1119,13 @@ p {
     /* Pricing */
     .pricing__money {
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         margin-top: 0;
     }
     .pricing__item {
-        margin-top: 20px;
+        width: 290px;
+        padding-top: 15px;
         margin-left: 0;
     }
 
@@ -1132,5 +1158,16 @@ p {
     }
     .form__three {
         width: 100%;
+    }
+    /* Footer */
+    .footer__social {
+        width: 310px;
+    }
+    .footer__icons {
+        margin-bottom: 5px;
+    }
+    .footer__icon {
+        margin-left: 0;
+        margin-right: 15px;
     }
 }
