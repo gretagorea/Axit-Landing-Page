@@ -6,11 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
     <title>Axit</title> 
 </head> 
 <body> 
 
-<header class="header"> 
+<header class="header fixed" id="header" > 
     <div class="container"> 
         <div class="header__inner"> 
 
@@ -20,12 +22,12 @@
                 </a>
             </div> 
 
-            <nav class="nav"> 
-                <a class="nav__link" href="#">Features</a> 
-                <a class="nav__link" href="#">About</a> 
-                <a class="nav__link" href="#">Pricing</a> 
-                <a class="nav__link" href="#">Reviews</a> 
-                <a class="nav__link" href="#">Contact</a> 
+            <nav class="nav" id="nav"> 
+                <a class="nav__link" href="#" data-scroll="#features">Features</a> 
+                <a class="nav__link" href="#" data-scroll="#about">About</a> 
+                <a class="nav__link" href="#"  data-scroll="#pricing">Pricing</a> 
+                <a class="nav__link" href="#"  data-scroll="#reviews">Reviews</a> 
+                <a class="nav__link" href="#"  data-scroll="#contact">Contact</a> 
             </nav>
             <button class="burger" type="button" id="navToggle">
                 <span class="burger__item">Menu</span>
@@ -37,7 +39,7 @@
 
 
 <!--Intro-->
-<div class="intro">
+<div class="intro" id="intro">
     <div class="container">
         <div class="intro__column">
 
@@ -109,7 +111,7 @@
 
 
 <!-- Tabs-->
-<section class="tabs">
+<section class="tabs" id="features">
     <div class="container">
         <div class="about__tabs">
             <div class="square__tabs">
@@ -194,7 +196,7 @@
 
 <!-- Awesome-->
 
-<section class="awesome">
+<section class="awesome" id="about">
     <div class="container">
          <div class="awesome__inner">
             <div class="awesome__intro">
@@ -240,7 +242,7 @@
 
 <!--Pricing-->
 
-<section class="pricing">
+<section class="pricing" id="pricing">
     <div class="container">
         <div class="pricing__inner">
             <div class="pricing__intro">
@@ -307,7 +309,7 @@
 
 <!-- Reviews -->
 
-<div class="reviews">
+<div class="reviews" id="reviews">
     <div class="container">
         <div class="reviews__inner">
             
@@ -385,7 +387,7 @@
 
 <!-- Contact-->
 
-<section class="contact">
+<section class="contact" id="contact">
     <div class="container">
         <div class="contact__inner">
             <div class="contact__intro">
